@@ -10,8 +10,10 @@ userspace via a reimplemented character device mmap function.
 For demonstration purposes the first value inside the "shared memory"
 is incremented by an interrupt. IRQ is attached to an existing IRQ.
 ## run
+```
 $ sudo mknod /dev/myChardev c 60 0
 $ ls -l /dev/char_dev
 > crw-r--r--. 1 root root 60, 0 Mar 17 09:03 /dev/myChardev
 $ insmod uartModule.ko
 $ ./userProcess
+```
